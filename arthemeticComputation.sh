@@ -31,3 +31,13 @@ dicitionaryComputation[4]=$computation3
 dicitionaryComputation[4]=$computation4
 
 echo "dictionary values are:" ${dicitionaryComputation[@]}
+
+## adding valuesto array
+variable=${dicitionaryComputation[@]}
+for values in $variable
+do
+	array[count]=$values
+	count=$(( $count+1 ))
+done
+echo " array values are:" ${array[@]}
+
