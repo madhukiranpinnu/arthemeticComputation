@@ -9,3 +9,7 @@ read number3
 
 computation1=$(( $number1+$number2*$number3 ))
 echo "first computation is:" $computation1
+
+## making second computation
+computation2=$(( $number1*$number2+$number3 ))
+echo "first computation is:" $computation2
