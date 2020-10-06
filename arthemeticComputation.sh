@@ -17,3 +17,7 @@ echo "secondt computation is:" $computation2
 ##making third computation
 computation3=$(( $number1+$number2/$number3 ))
 echo "third computation is:" $computation3
+
+##making fourth computation
+computation4=$(( $number1%$number2+$number3 ))
+echo "fourth computation is:" $computation4
