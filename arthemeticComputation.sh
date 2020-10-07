@@ -25,9 +25,9 @@ echo "fourth computation is:" $computation4
 ##adding digits to dictionary
 declare -A dicitionarycomputation
 
-dicitionaryComputation[4]=$computation1
-dicitionaryComputation[4]=$computation2
-dicitionaryComputation[4]=$computation3
+dicitionaryComputation[1]=$computation1
+dicitionaryComputation[2]=$computation2
+dicitionaryComputation[3]=$computation3
 dicitionaryComputation[4]=$computation4
 
 echo "dictionary values are:" ${dicitionaryComputation[@]}
@@ -40,4 +40,15 @@ do
 	count=$(( $count+1 ))
 done
 echo " array values are:" ${array[@]}
+
+##sorting
+#sorting values in descending order
+
+sort=`echo ${array[@]} | awk 'BEGIN{RS=" ";} {print $1}' | sort -n -r`
+counter=0
+for values in $sort
+do
+sortedarray[((counter++))]="$values"
+done
+echo "sorted array in descending order are:" ${sortedarray[@]}
 
